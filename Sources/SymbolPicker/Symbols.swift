@@ -8,11 +8,10 @@
 import Foundation
 
 /// Simple singleton class for providing symbols list per platform availability.
-class Symbols {
+public class Symbols {
+    public static let shared = Symbols()
 
-    static let shared = Symbols()
-
-    private(set) var allSymbols: [String]
+    public private(set) var allSymbols: [String]
 
     private init() {
         self.allSymbols = []
